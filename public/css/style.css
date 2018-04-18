@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+* {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif; }
+
+.container {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 auto; }
+
+li {
+  list-style-type: none; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding-bottom: 1.5rem; }
+  .header__logo {
+    font-size: 320%; }
+  .header__form {
+    display: flex;
+    justify-content: space-between; }
+    .header__form--btn {
+      border: none;
+      background-color: rgba(0, 0, 0, 0.692);
+      padding: 1rem;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.911);
+      margin-left: .5rem; }
+
+.center {
+  transform: translate(0, 25%);
+  margin-left: .5rem; }
