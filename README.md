@@ -1,8 +1,8 @@
-            askme.com - Q/A app
+             HOW TO -
 ![wireframe](./public/images/wireframe.jpg)
-Users get to ask quesions and other people get to vote on the answer like stackoverflows + -.
-
+ 
+An app that lets users post on How to do things like make a receipe or play Dota 2? 
 
 
 Extra: 
-If i have some extra time remaining Im planning to add user authentication. But firstly, I want to meet all the basic requirements.
+Im plannin on addin user authentication after I meet all the basic requirements. 
