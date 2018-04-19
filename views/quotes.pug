@@ -1,3 +1,6 @@
 extends boilerplate
 block content
-    h1 What A Wonderful world
+    
+    h1 What A Wonderful world 
+    each i in howto
+        li #{i.name} , #{i.description}, #{i.direction} , #{i.id}
