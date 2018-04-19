@@ -1,6 +1,7 @@
 extends boilerplate 
 block content
     .container
+        //- header
         ul.header 
             .header__logo Connect
             .header__form 
@@ -9,6 +10,19 @@ block content
                 h3.center Password
                 input.header__form--input(type='text', placeholder='Username', name='username')
                 input.header__form--btn(type='submit', placeholder='Submit', name='sdfs')
+        
+        //- body  
+        .main
+            //- images
+            .main__gallery
+                img.main__gallery--1.images(src='/images/1.jpg', alt='images')
+                img.main__gallery--2.images(src='/images/2.jpeg', alt='images')
+                img.main__gallery--3.images(src='/images/3.jpeg', alt='images')
+            
+            //- content
+            .main__content 
+                h3 Learn
+                h3 Teach
+                h3 Share 
 
-                
                 

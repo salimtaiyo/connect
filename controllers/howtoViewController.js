@@ -4,6 +4,10 @@ function sendAll(req,res) {
     });
 }
 
+function sendCreateHowto(req,res) {
+    howto = res.locals.newHowto
+    res.redirect(`/dbb`);
+}
 module.exports = {
     sendAll
 }
