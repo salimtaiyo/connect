@@ -1,0 +1,45 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(12, 107, 216, 0.863),
+         rgba(233, 168, 27, 0.589)),
+          url("../images/2.jpeg");
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  
+  
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &__logo {
+    height: 3.5rem;
+    padding: .5rem;
+    // animation: letItRo infinite 20s linear;
+  }
+
+}
+  
+
+  
+//   &__text-box {
+//       position: absolute;
+//       top: 40%;
+//       left: 50%;
+//       transform: translate(-50%,-50%);
+//       text-align: center;
+      
+//   }
+.title__primary{
+   position: relative;
+   top: 30%;
+   left: 40%;
+}
+  
+
+  

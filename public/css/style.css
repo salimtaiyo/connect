@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
   margin: 0;
   padding: 0; }
@@ -6,65 +7,38 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
-.container {
-  width: 80vw;
-  height: 100vh;
-  margin: 0 auto; }
+body {
+  padding: 1.5rem; }
 
 li {
   list-style-type: none; }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-  padding-bottom: 1.5rem; }
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(12, 107, 216, 0.863), rgba(233, 168, 27, 0.589)), url("../images/2.jpeg");
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
   .header__logo {
-    font-size: 320%; }
-  .header__form {
-    display: flex;
-    justify-content: space-between; }
-    .header__form--btn {
-      border: none;
-      background-color: rgba(0, 0, 0, 0.692);
-      padding: 1rem;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.911);
-      margin-left: .5rem; }
+    height: 3.5rem;
+    padding: .5rem; }
 
-.center {
-  transform: translate(0, 25%);
-  margin-left: .5rem; }
+.title__primary {
+  position: relative;
+  top: 30%;
+  left: 40%; }
 
-.main {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  width: 100%;
-  height: 70vh; }
-  .main__gallery {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-gap: 2rem; }
-    .main__gallery--1 {
-      grid-row: 1/ span 3;
-      grid-column: 1/ span 2; }
-    .main__gallery--2 {
-      grid-row: 1/span 2;
-      grid-column: 2/ span 3; }
-    .main__gallery--3 {
-      grid-row: 1/ span 2;
-      grid-column: 4/ span 2;
-      z-index: -1; }
-  .main__content {
-    width: 20%;
-    border-left: 1px solid black; }
+.secondContainer {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center; }
 
-.images {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: contain; }
+.secondContainer__items--subcontent {
+  display: none; }
