@@ -1,23 +1,29 @@
 extends boilerplate
 block content
+    //- the main container
     .secondContainer
-    
-        .form
+        //- form
+        .form 
+            .addBtn ADD 
             .form__add
-                form(action='/students', method='POST')
-                    input(type='text', name='fname', placeholder='Title')
+                form(action='/dbb', method='POST')
+                    input(type='text', name='name', placeholder='Title')
                     br
-                    input(type='text', name='lname', placeholder='Description')
+                    input(type='text', name='description', placeholder='Description')
                     br
-                    input(type='text', name='image', placeholder='Details')
+                    input(type='text', name='direction', placeholder='Details')
                     br
-                    input(type='submit', value='Add Student')
+                    input(type='submit', value='Add')
 
+        //- looping through the database
         each i in howto
             .secondContainer__items
                 h3.secondContainer__items--header #{i.name} 
                 .secondContainer__items--subcontent
                     p.secondContainer__items--description #{i.description}
                     p.secondContainer__items--direction  #{i.direction}  
+                    //- delete 
+                    form.delete(action=`/dbb/${i.id}?_method=DELETE`, method='POST')
+                        input.deleteBtn(type='submit', value='Delete')
 
     include footer.pug

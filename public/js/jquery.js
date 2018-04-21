@@ -10,4 +10,10 @@ $(document).ready(function(){
         e.preventDefault();
         $(this).next('.secondContainer__items--subcontent').toggle('slow');
     }); 
+
+    // form display
+
+    $('.addBtn').on('click',function(){
+       $('.form__add').slideToggle('slow');
+    });
 });

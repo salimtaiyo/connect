@@ -1,3 +1,4 @@
+\c tutorials
 DROP TABLE IF EXISTs howto CASCADE;
 
 -- add create tables here 
@@ -12,4 +13,5 @@ INSERT INTO howto
 (name, description, direction)
 VALUES
 ('HOW TO DOTA', 'BLJLJLJ', 'JKJJUHGY GUGUYGYG UYGUYGUYG GUG'),
-('HOw to slack', 'slack', 'slackkk');
+('HOw to slack', 'slack', 'slackkk'),
+('HOW TO DOTA', 'BLJLJLJ', 'JKJJUHGY GUGUYGYG UYGUYGUYG GUG');

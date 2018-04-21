@@ -6,6 +6,7 @@ const express = require('express');
 
 const app = express();
 const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
@@ -22,13 +23,15 @@ app.use(bodyParser.urlencoded({ extended: false}));
 // app.use(express.static(path.join(__dirname,'public')));
 app.use(bodyParser.json());
 app.use( express.static('public'));
+app.use(methodOverride('_method'));
 
 const homeRoute = require('./routes/app');
 // app.set('superSecret', process.env.SERVER_SECRET);
 app.set('view engine', 'pug');
 // main router
 
-app.use('/', homeRoute);
+app.use('/', homeRoute.router);
+app.use('/dbb', homeRoute.deleteRouter);
 
 app.listen(PORT, () =>{
     console.log(`this app is running in ${PORT}`);

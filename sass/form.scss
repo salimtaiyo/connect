@@ -1,0 +1,23 @@
+// add form
+.form{
+    font-size: 2rem;
+    border: 1px solid black;
+    width: 30%;
+    left: 20%;
+    display: inline-block;
+    background-color: rgba(24, 1, 1, 0.87);
+    color: rgba(255, 255, 255, 0.918);
+    transform: translateY(-5%);
+
+    &:hover{
+        cursor: pointer;
+        
+    }
+    // &:active{
+    //     transform: translateY(0);
+    // }
+
+    &__add {
+        display: none;
+    }
+}
