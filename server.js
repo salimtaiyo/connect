@@ -10,9 +10,6 @@ const methodOverride = require('method-override');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 
-
-
-
 // app.use(session({
 //     secret: app.get('superSecret'),
 //     resave: false,
@@ -32,7 +29,7 @@ app.set('view engine', 'pug');
 
 app.use('/', homeRoute.router);
 app.use('/dbb', homeRoute.deleteRouter);
-
+// app.use('/dbb', homeRoute.updateRouter);
 app.listen(PORT, () =>{
     console.log(`this app is running in ${PORT}`);
 })

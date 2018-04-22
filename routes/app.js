@@ -2,6 +2,7 @@ const express = require('express');
 // router constructor 
 const router = express.Router();
 const deleteRouter = express.Router();
+const updateRouter = express.Router();
 const howtoController = require('../controllers/howtoController');
 const howtoViewController = require('../controllers/howtoViewController');
 
@@ -22,9 +23,14 @@ router.route('/dbb')
 
 
 deleteRouter.route('/:id')
+.put(howtoController.update)
 .delete(howtoController.destroy, howtoViewController.deleteHowto)
+
+updateRouter.route('/:id/edit')
+.get(howtoController.getOne, howtoViewController.editHowto)
 
  module.exports = {
    router,
-   deleteRouter
+   deleteRouter,
+   updateRouter
   };

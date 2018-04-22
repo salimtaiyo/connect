@@ -24,14 +24,83 @@ block content
     //-             h3 Learn
     //-             h3 Teach
     //-             h3 Share 
+
+    //- contains the landing pages header
     header.header
         .header__logo-box
         img.header__logo(src='images/logo-white.png', alt='logo')
         
         h1.title__primary 
-            span.title__primary--top  Teach
-            span.title__primary--bot  Learn
+            span.title__primary--top  SHARE
+            span.title__primary--bot  INSPIRE
             br
-            a.btn.btn--white.btn--animated(href='#') Browse through
+            span.title__primary--btn Healing the body with your thoughts
+            br
+            button.title__primary--input Get Started
+
+    //- second page (contains the graph and diagram)
+    main.main
+        
+        .main__content
+            h1.main__content--header After a storm comes calm
+            .main__content__flex
+                .main__content__flex--story
+                    h3.diseases Cancer
+                        br  
+                    span.diseases__span Every 1 in 3 Americans
+                    h3.diseases Joint Disorder
+                        br
+                    span.diseases__span Every 1 in 3 Americans
+                    h3.diseases Diabetes
+                        br
+                    span.diseases__span Every 1 in 3 Americans
+                    h3.diseasesBack Back problems
+                        br
+                    span.diseases__span Every 1 in 3 Americans
+                    h3.diseases High Cholestrol
+                        br
+                    span.diseases__span Every 1 in 3 Americans
+
+                .main__content__flex--chart
+                    canvas#myChart
+                    
+            .main__quote If you get depressed by the disease that ails you will be worse, try to be positive and you will see that soon you will have good health again.
+    .footer
+        span
+            i.fab.fa-facebook.fa-3x
+            i.fab.fa-instagram.fa-3x
+            i.fab.fa-youtube.fa-3x
+
+
+    //- modal for the sign in/ sign up 
+    .modal
+        .modal__container
+            .modal__container--span X 
+
+            //- log in box
+            .modal__container--one
+                h3 Sign in
+                .input__name
+                    p
+                        label  User email
+                        input.input__name--1(type='text', placeholder='Name')
+                    p
+                        label Password
+                        input.input__name--2(type='text', placeholder='Name')
+                        input.input__name--btn(type='submit', placeholder='Confirm')
+            //- sign up 
+            .modal__container--two
+                h3 Sign up
+                .input__name
+                    p
+                        label  User email
+                        input.input__name--1(type='text', placeholder='Name')
+                    p
+                        label Password
+                        input.input__name--2(type='text', placeholder='Name')
+                        input.input__name--btn(type='submit', placeholder='Confirm')
+                        
+        a(href="#").a sign in as guest 
+
 
     include footer.pug

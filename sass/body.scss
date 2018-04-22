@@ -1,0 +1,66 @@
+.main{
+    height: 100rem;
+    background-color: rgba(236, 235, 235, 0.842);
+    position: relative;
+    margin-top: -15rem;
+    z-index: -1;
+  
+    // header of main 
+    &__content{
+      position: absolute;
+      top: 20rem;
+      text-transform: uppercase;
+      font-size: 1.6vw;
+      
+      &--header{
+        color: rgba(29, 28, 28, 0.596);
+        // text-shadow: -6px 5px 8px rgba(28, 28, 28, 0.801);
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+  
+      &__flex{
+        display: flex;
+        justify-content: space-between;
+  
+      &--story{
+        border-radius: 60%;
+        background-image: 
+            url("../images/imp.jpg");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 30%;
+        padding: 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.842);
+        font-size: 1.7vw;
+  
+      }
+  
+      &--chart{
+        width: 71vw;
+        padding: 1rem;
+      }
+      }
+    }
+  
+    // quote
+    &__quote{
+      padding: 4rem;
+      font-size: 1.4vw;
+      text-align: center;
+    }
+  
+  }
+  
+  // diseases heading
+  .diseases{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    &__span{
+      color: rgba(126, 213, 111, 0.801);
+      font-size: 1.2vw;
+    }
+  
+  }

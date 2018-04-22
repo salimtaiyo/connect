@@ -1,0 +1,34 @@
+// annimation for the headers slide in effect
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        opacity: .5;
+        transform: translateX(1rem);
+
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+}
+
+// animatin for the sub headers drop dow effect 
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+    80% {
+        opacity: .5;
+        transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}

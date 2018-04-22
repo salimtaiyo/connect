@@ -16,16 +16,16 @@ function getAll(req, res, next) {
     });
 }
 
-// function getOne(req,res,next){
-//     howtoDb.getOneHowto(req.params.id)
-//     .then(data => {
-//         res.locals.howto = data;
-//         next();
-//     })
-//     .catch(err => {
-//         next(err);
-//     })
-// }
+function getOne(req,res,next){
+    howtoDb.getOneHowto(req.params.id)
+    .then(data => {
+        res.locals.howto = data;
+        next();
+    })
+    .catch(err => {
+        next(err);
+    })
+}
 
 function create(req,res,next) {
     howtoDb.createHowto(req.body)
@@ -39,27 +39,27 @@ function create(req,res,next) {
     })
 }
 
-// function edit(req,res) {
-//     howtoDb.getOneHowto(req.params.id)
-//     .then(data => {
-//         res.locals.howto = data;
-//         next();
-//     })
-//     .catch(err => {
-//         err:err.message
-//     })
-// }
+function edit(req,res) {
+    howtoDb.getOneHowto(req.params.id)
+    .then(data => {
+        res.locals.howto = data;
+        next();
+    })
+    .catch(err => {
+        err:err.message
+    })
+}
 
-// function update(req,res,next){
-//     req.body.id = req.params.id;
-//     howtoDb.updateHowto(req.body)
-//     .then(data => {
-//         res.redirect(`/dbb`)
-//     })
-//     .catch(err => {
-//         err:err
-//     })
-// }
+function update(req,res,next){
+    req.body.id = req.params.id;
+    howtoDb.updateHowto(req.body)
+    .then(data => {
+        res.redirect(`/dbb`)
+    })
+    .catch(err => {
+        err:err
+    })
+}
 
 function destroy(req,res) {
     console.log('deleted');
@@ -81,8 +81,8 @@ function destroy(req,res) {
 
 module.exports = {
     getAll,
-    // getOne,
+    getOne,
     create,
-    // update,
+    update,
     destroy
 }

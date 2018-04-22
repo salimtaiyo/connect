@@ -4,21 +4,21 @@ function sendAll(req,res) {
     });
 }
 
-// function sendOneHowto(req, res){
-//     res.render('dbb')
-// }
+function sendOneHowto(req, res){
+    res.render('dbb')
+}
 
 function sendCreateHowto(req,res) {
     howto = res.locals.newHowto
     res.redirect(`/dbb`);
 }
 
-// function editHowto(req,res) {
-//     howto = res.locals.howto;
-//     res.render(`/dbb`,{
-//         howto: res.locals.howto
-//     });
-// }
+function editHowto(req,res) {
+    howto = res.locals.howto;
+    res.render(`/dbb`,{
+        howto: res.locals.howto
+    });
+}
 
 function deleteHowto(req,res) {
     console.log('view')
@@ -26,7 +26,8 @@ function deleteHowto(req,res) {
 }
 module.exports = {
     sendAll,
+    sendOneHowto,
     sendCreateHowto,
-    // editHowto,
+    editHowto,
     deleteHowto
 }

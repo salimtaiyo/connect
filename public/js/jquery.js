@@ -16,4 +16,13 @@ $(document).ready(function(){
     $('.addBtn').on('click',function(){
        $('.form__add').slideToggle('slow');
     });
+
+    // sign in form display
+
+    $('.title__primary--input').on('click', function(){
+        $('.modal').toggle('slow');
+       
+    })
+
+    $('.modal__container--span').on('click', () => $('.modal').toggle('slow'));
 });
