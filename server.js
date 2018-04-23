@@ -1,20 +1,23 @@
 const express = require('express');
 
-// const session = require('express-session');
-// const authService = require('.user/auth/AuthService');
-// const authRouter = require('./user/auth/AuthRouter');
+const session = require('express-session');
+
+
 
 const app = express();
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const path = require('path');
 const PORT = process.env.PORT || 3000;
+// const authRouter = require('/services/auth/AuthRouter');
 
+app.set('server_secret', process.env.SERVER_SECRET);
 // app.use(session({
-//     secret: app.get('superSecret'),
+//     secret: app.get('server_secret'),
 //     resave: false,
 //     saveUnintialized: false,
 // }));
+
 app.use( express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false}));
 // app.use(express.static(path.join(__dirname,'public')));
@@ -23,7 +26,7 @@ app.use( express.static('public'));
 app.use(methodOverride('_method'));
 
 const homeRoute = require('./routes/app');
-// app.set('superSecret', process.env.SERVER_SECRET);
+
 app.set('view engine', 'pug');
 // main router
 

@@ -56,14 +56,15 @@ block content
             //- log in box
             .modal__container--one
                 h3 Sign in
+                form(method='POST', action='/auth/login')
                 .input__name
                     p
                         label  User email
-                        input.input__name--1(type='text', placeholder='Name')
+                        input.input__name--1(type='email' placeholder='email' name='email')
                     p
                         label Password
-                        input.input__name--2(type='text', placeholder='Name')
-                        input.input__name--btn#submit(type='submit', placeholder='Confirm')
+                        input.input__name--2(type='password' placeholder='password' name='password')
+                        input.input__name--btn#submit(type='submit' name='login')
             //- sign up 
             .modal__container--two
                 h3 Sign up

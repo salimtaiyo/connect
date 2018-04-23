@@ -6,6 +6,15 @@ const updateRouter = express.Router();
 const howtoController = require('../controllers/howtoController');
 const howtoViewController = require('../controllers/howtoViewController');
 
+// user authentication 
+const userRouter = require('express').Router();
+const AuthService = require('../services/auth/AuthServices');
+const userViewController = require('../controllers/howtoViewController');
+
+userRouter.get('/profile', AuthService.loginRequired,(req,res) =>{ 
+  res.json(req.session);
+});
+
 function sendError(err, req, res, next) {
     console.log('I send errors');
     res.status(500).json({
@@ -31,6 +40,7 @@ updateRouter.route('/:id/edit')
 
  module.exports = {
    router,
+   userRouter,
    deleteRouter,
    updateRouter
   };
