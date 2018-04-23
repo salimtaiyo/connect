@@ -1,4 +1,4 @@
-\c tutorials
+
 DROP TABLE IF EXISTS howto CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 
