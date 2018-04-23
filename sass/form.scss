@@ -1,26 +1,3 @@
-// // add form
-// .form{
-//     font-size: 2rem;
-//     border: 1px solid black;
-//     width: 30%;
-//     left: 20%;
-//     display: inline-block;
-//     background-color: rgba(24, 1, 1, 0.87);
-//     color: rgba(255, 255, 255, 0.918);
-//     transform: translateY(-5%);
-
-//     &:hover{
-//         cursor: pointer;
-        
-//     }
-//     // &:active{
-//     //     transform: translateY(0);
-//     // }
-
-//     &__add {
-//         display: none;
-//     }
-// }
 
 .modal{
     position: absolute;
@@ -66,16 +43,7 @@
 }
 
 .input__name{
-    // position: absolute;
-    // padding: 3vw;
-    // top: 20%;
-    // left: 30%;
-    // display: none;
-    // height: 30vw;
-    // width: 40vw;
-    // z-index: 100;
-    // background: rgba(255, 255, 255, 0.808);
-  
+
     & p input{
         width: 99%;
         margin: 0 auto;
@@ -87,20 +55,22 @@
         color: rgb(41, 39, 39);
         height: 4vw;
         font-size: 150%;
+        transition: all .3s linear;
+
+        &:hover{
+            background-color: rgba(128, 126, 126, 0.623);
+        }
     }
     &--btn{
         border: .2vw solid black;
         display: inline-block;
-        // position: absolute;
-        // left: 20%;
-        // width: 60%;
         background-color: rgba(27, 25, 25, 0.829);
         color: #fff;
         font-size: 1vw;
         height: 1vw;
   
         &:hover{
-            cursor: pointer;
+            @include pointer;
         }
     }
     & p{
@@ -116,3 +86,92 @@
     font-size: 150%;
     text-align: center;
 }
+
+// button 
+#submit{
+    background-color: rgba(54, 53, 53, 0.733);
+    width: 70%;
+    margin: 0 auto;
+    @include pointer;
+}
+
+// content modal
+.secondContainer__items{
+    overflow: scroll;
+    // stories header
+    &--header{
+        border: 1px dotted black;
+        padding: 1rem;
+    }
+
+    // stories 
+    &--subcontent{
+        height: 20rem;
+    }
+
+    &--description{
+        font-size: 200%;
+        font-style: oblique;
+    }
+
+    &--direction{
+        font-size: 150%;
+        margin-bottom: 2rem;
+    }
+
+}
+
+// edit button for the story
+.edit{
+    padding: 1rem;
+    background-color: rgba(27, 26, 26, 0.829);
+    color: rgba(255, 255, 255, 0.856);
+    @include pointer;
+}
+
+// edit form 
+.add{
+    margin-top: 5px;
+    display: none;
+    height: 20rem;
+
+    // edit button 
+    &--submit{
+        @include pointer;
+        outline: none;
+        background-color: rgba(43, 41, 41, 0.925);
+        color: rgba(255, 255, 255, 0.89);
+        transition: all .5s ease-in-out;
+        // hover effect on the edit button
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.911);
+            color: rgba(0, 0, 0, 0.856)
+        }
+        
+    }
+
+    & input{
+        outline: none;
+        width: 20rem;
+        height: 5rem;
+
+    }
+}
+
+// delete form
+.delete{
+    display: inline-block;
+}
+.deleteBtn{
+    padding: 1rem;
+    background-color: rgba(27, 26, 26, 0.829);
+    color: rgba(255, 255, 255, 0.87);
+    outline: none;
+    margin: 0 auto;
+    @include pointer;
+
+    &:focus{
+        outline: none;
+    }
+}
+

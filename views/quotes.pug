@@ -1,24 +1,39 @@
 extends boilerplate
 block content
+
+    //- menu
+    .menu 
+        a(href="http://localhost:3000").menu__title Home
+      
+    .header__content
+        .header__content--c
+            h1  Welcome to Asha        
+            p  Consider what a long way you have come today
+
     //- the main container
     .secondContainer
-        //- form
+        //- form for the story submission 
         .form 
-            .addBtn ADD 
+            .addBtn 
+                span Share your story 
+                span Share your story 
             .form__add
                 form(action='/dbb', method='POST')
                     input(type='text', name='name', placeholder='Title')
                     br
                     input(type='text', name='description', placeholder='Description')
                     br
-                    input(type='text', name='direction', placeholder='Details')
+                    input#form__add--des(type='text', name='direction', placeholder='Details')
                     br
-                    input(type='submit', value='Add')
+                    input#form__add--submit(type='submit', value='Add')
 
         //- looping through the database
         each i in howto
+            //- displaying
             .secondContainer__items
+                //- stories header
                 h3.secondContainer__items--header #{i.name} 
+                //- stories content
                 .secondContainer__items--subcontent
                     p.secondContainer__items--description #{i.description}
                     p.secondContainer__items--direction  #{i.direction}  
@@ -26,6 +41,7 @@ block content
                     form.delete(action=`/dbb/${i.id}?_method=DELETE`, method='POST')
                         input.deleteBtn(type='submit', value='Delete')
                     //- update
+                    button.edit Edit
                     .add
                         form(action=`/dbb/${i.id}?_method=PUT`, method='POST')
                             input(type='text', name='name', value=`${i.name}`)
@@ -34,7 +50,7 @@ block content
                             br
                             input(type='text', name='direction', value=`${i.direction}`)
                             br
-                            input(type='submit', value='Edit')
+                            input.add--submit(type='submit', value='Edit')
 
 
     include footer.pug

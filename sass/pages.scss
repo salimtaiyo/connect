@@ -1,14 +1,61 @@
+// menu button 
+.menu{
+    text-align: center;
+    font-size: 1.6rem;
+    &__title{
+        text-decoration: none;
+        font-family: 'Philosopher', sans-serif;
+    }
+    
+}
+
+.header__content{
+    position: relative;
+    background-image: url('/images/2.jpeg');
+    background-position: top center;
+    height: 40rem;
+    text-align: center;
+    color: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    -webkit-box-shadow: $box;
+    -moz-box-shadow: $box;
+    box-shadow: $box;
+
+
+        &--c{
+            
+            position: relative;
+            display: inline-block;
+            top: 17rem;
+            padding: 2rem;
+        
+            & h1{
+                font-family: 'Philosopher', sans-serif;
+                font-size: 4rem;
+                border-bottom: .5px solid white;
+            }
+            & p{
+                font-family: 'Philosopher', sans-serif;
+                font-size: 3rem;
+            }
+        }
+}
+
+
+// content 
 .secondContainer{
     width: 80vw;
     margin: 0 auto;
     text-align: center;
 
     &__items{
-       
+    
         margin: 1rem;
         padding: 1rem;
         
         &--header{
+            @include pointer;
             font-size: 180%;
 
         }
@@ -17,4 +64,80 @@
         }
     }
        
+}
+
+// form for the stories
+.form{
+    font-size: 225%;
+
+    // hidden 
+    &__add{
+        display: none;
+    }
+    // add stories 
+    .addBtn{
+        @include pointer;
+        padding: 2rem;
+        border: 1px solid rgba(0, 0, 0, 0.651);
+        width: 25rem;
+        margin: 5% auto;
+        position: relative;
+        overflow: hidden;
+
+        & span{  
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all .3s ease-in-out;
+
+            &:nth-child(1){
+                transform: translateX(-100%);
+            }
+            
+        }
+        // add stories button animation 
+        &:hover span:nth-child(1){
+            transform: translateX(0);
+        }
+        &:hover span:nth-child(2){
+            transform: translateX(0);
+        }
+        &:hover span:nth-child(2){
+            transform: translateX(100%);
+        }
+    }
+
+    &__add input {
+        transition: all .5s linear;
+        width: 59%;
+        margin: 0 auto;
+        // margin-bottom: 1vw;
+        background: transparent;
+        border: none;
+        border-bottom: .2rem solid black;
+        outline: none;
+        color: rgb(41, 39, 39);
+        height: 5vh;
+        font-size: 100%;
+
+        &:hover{
+            background-color: rgba(180, 179, 179, 0.863);
+        }
+    }
+   
+}
+
+// add button for the submit stories
+#form__add--submit{
+    background-color: rgba(54, 53, 53, 0.733);
+    width: 30%;
+    margin: 0 auto;
+    @include pointer;
+}
+
+// description bar of the submit stories
+#form__add--des{
+    height: 20rem;
 }

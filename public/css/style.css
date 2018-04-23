@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Philosopher");
 @keyframes slideIn {
   0% {
     opacity: 0;
@@ -64,6 +65,7 @@ li {
   .title__primary--bot {
     animation: dropDown 3s linear; }
   .title__primary--btn {
+    font-family: 'Philosopher', sans-serif;
     position: absolute;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.925);
@@ -100,6 +102,38 @@ li {
 .fa-3x {
   padding: 5px; }
 
+.menu {
+  text-align: center;
+  font-size: 1.6rem; }
+  .menu__title {
+    text-decoration: none;
+    font-family: 'Philosopher', sans-serif; }
+
+.header__content {
+  position: relative;
+  background-image: url("/images/2.jpeg");
+  background-position: top center;
+  height: 40rem;
+  text-align: center;
+  color: #fff;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-box-shadow: 2px 6px 27px 4px #696569;
+  -moz-box-shadow: 2px 6px 27px 4px #696569;
+  box-shadow: 2px 6px 27px 4px #696569; }
+  .header__content--c {
+    position: relative;
+    display: inline-block;
+    top: 17rem;
+    padding: 2rem; }
+    .header__content--c h1 {
+      font-family: 'Philosopher', sans-serif;
+      font-size: 4rem;
+      border-bottom: .5px solid white; }
+    .header__content--c p {
+      font-family: 'Philosopher', sans-serif;
+      font-size: 3rem; }
+
 .secondContainer {
   width: 80vw;
   margin: 0 auto;
@@ -108,9 +142,60 @@ li {
     margin: 1rem;
     padding: 1rem; }
     .secondContainer__items--header {
+      cursor: pointer;
       font-size: 180%; }
     .secondContainer__items--subcontent {
       display: none; }
+
+.form {
+  font-size: 225%; }
+  .form__add {
+    display: none; }
+  .form .addBtn {
+    cursor: pointer;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.651);
+    width: 25rem;
+    margin: 5% auto;
+    position: relative;
+    overflow: hidden; }
+    .form .addBtn span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all .3s ease-in-out; }
+      .form .addBtn span:nth-child(1) {
+        transform: translateX(-100%); }
+    .form .addBtn:hover span:nth-child(1) {
+      transform: translateX(0); }
+    .form .addBtn:hover span:nth-child(2) {
+      transform: translateX(0); }
+    .form .addBtn:hover span:nth-child(2) {
+      transform: translateX(100%); }
+  .form__add input {
+    transition: all .5s linear;
+    width: 59%;
+    margin: 0 auto;
+    background: transparent;
+    border: none;
+    border-bottom: .2rem solid black;
+    outline: none;
+    color: #292727;
+    height: 5vh;
+    font-size: 100%; }
+    .form__add input:hover {
+      background-color: rgba(180, 179, 179, 0.863); }
+
+#form__add--submit {
+  background-color: rgba(54, 53, 53, 0.733);
+  width: 30%;
+  margin: 0 auto;
+  cursor: pointer; }
+
+#form__add--des {
+  height: 20rem; }
 
 .modal {
   position: absolute;
@@ -151,7 +236,10 @@ li {
   outline: none;
   color: #292727;
   height: 4vw;
-  font-size: 150%; }
+  font-size: 150%;
+  transition: all .3s linear; }
+  .input__name p input:hover {
+    background-color: rgba(128, 126, 126, 0.623); }
 
 .input__name--btn {
   border: .2vw solid black;
@@ -172,6 +260,63 @@ li {
   text-decoration: none;
   font-size: 150%;
   text-align: center; }
+
+#submit {
+  background-color: rgba(54, 53, 53, 0.733);
+  width: 70%;
+  margin: 0 auto;
+  cursor: pointer; }
+
+.secondContainer__items {
+  overflow: scroll; }
+  .secondContainer__items--header {
+    border: 1px dotted black;
+    padding: 1rem; }
+  .secondContainer__items--subcontent {
+    height: 20rem; }
+  .secondContainer__items--description {
+    font-size: 200%;
+    font-style: oblique; }
+  .secondContainer__items--direction {
+    font-size: 150%;
+    margin-bottom: 2rem; }
+
+.edit {
+  padding: 1rem;
+  background-color: rgba(27, 26, 26, 0.829);
+  color: rgba(255, 255, 255, 0.856);
+  cursor: pointer; }
+
+.add {
+  margin-top: 5px;
+  display: none;
+  height: 20rem; }
+  .add--submit {
+    cursor: pointer;
+    outline: none;
+    background-color: rgba(43, 41, 41, 0.925);
+    color: rgba(255, 255, 255, 0.89);
+    transition: all .5s ease-in-out; }
+    .add--submit:hover {
+      background-color: rgba(255, 255, 255, 0.911);
+      color: rgba(0, 0, 0, 0.856); }
+  .add input {
+    outline: none;
+    width: 20rem;
+    height: 5rem; }
+
+.delete {
+  display: inline-block; }
+
+.deleteBtn {
+  padding: 1rem;
+  background-color: rgba(27, 26, 26, 0.829);
+  color: rgba(255, 255, 255, 0.87);
+  outline: none;
+  margin: 0 auto;
+  cursor: pointer; }
+  .deleteBtn:focus {
+    outline: none; }
 
 .main {
   height: 100rem;

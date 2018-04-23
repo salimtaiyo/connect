@@ -25,4 +25,10 @@ $(document).ready(function(){
     })
 
     $('.modal__container--span').on('click', () => $('.modal').toggle('slow'));
+
+    // story edit button 
+    $('.edit').on('click', function(e) {
+        e.preventDefault();
+        $(this).next('.add').toggle('slow')
+    });
 });

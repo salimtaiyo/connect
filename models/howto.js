@@ -1,5 +1,23 @@
+const bcrypt = require('bcrypt');
 const db = require('../config/connection');
 
+// user auth users table
+findUser = (uname) =>{
+    const queryPromise = db.one(`SELECT * FROM 
+    users WHERE uname = $1`, 
+    uname)
+    return queryPromise;
+}
+// creating a user
+
+createUser = (user) => {
+    const queryPromise = db.one(`INSERT INTO users (uname, email,password)
+    VALUES ($/uname/, $/email/, $(password) 
+    RETURNING * `, user);
+    return queryPromise;
+}
+
+// howto table
 function getAllTutorials(){
     const queryPromise = db.any(`SELECT * FROM howto`
   );
@@ -44,6 +62,8 @@ function deleteHowto(id){
 }
 
 module.exports = {
+    findUser,
+    createUser,
     getAllTutorials,
     getOneHowto,
     createHowto,

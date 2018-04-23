@@ -1,3 +1,24 @@
+// user auth
+function showLoginForm(req,res) {
+    console.log('Login Form');
+    res.render('dbb');
+}
+
+function showRegistrerForm(req,res){
+    res.render('dbb');
+
+}
+
+function handleUserProfile(req,res) {
+    res.redirect('dbb');
+}
+
+function handleLogout(req,res) {
+    res.redirect('/');
+}
+
+
+// howto table
 function sendAll(req,res) {
     res.render('quotes', {
         howto: res.locals.howto
@@ -25,6 +46,10 @@ function deleteHowto(req,res) {
     res.redirect(`/dbb`);
 }
 module.exports = {
+    showLoginForm,
+    showRegistrerForm,
+    handleUserProfile,
+    handleUserProfile,
     sendAll,
     sendOneHowto,
     sendCreateHowto,
