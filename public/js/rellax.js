@@ -14,7 +14,7 @@ Chart.defaults.global.defaultFontSize = 15;
 Chart.defaults.global.defaultFontColor = '#777';
 
 let massPopChart = new Chart(myChart, {
-  type:'horizontalBar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+  type:'horizontalBar', 
   data:{
     labels:['Cancer', 'Joint Disease', 'Diabetes', 'Back problems','High cholestrol'],
     datasets:[{
