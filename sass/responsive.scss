@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+    .title__primary{
+        left: 25%;
+        color: rgba(255, 255, 255, 0.925);
+        
+        
+        // main header
+        &--top{
+         animation: slideIn 3s linear;
+         font-size: 350%;
+        }
+     
+        &--bot{
+         
+         animation: dropDown 3s linear;
+        }
+     
+        &--btn{
+          font-size: 70%;
+         }
+        }
+        .main__flex{
+            display: inline-flex;
+        }
+}
+

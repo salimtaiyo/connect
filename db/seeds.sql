@@ -27,3 +27,7 @@ VALUES
 ('Depression', 'Alume Alala', 'I thought of dying every single day, I just didnt want to live. All of the things that happened to me in my life were painful. Raised in an orphange, I didnt expereince a lot of love. I came to realize we have to change the way we think and today I am living.#staystrong'),
 ('sciatica', 'KP Malhotra', 'I couldnt move, everything was painfull, the doctors werent helpful. So I decided to help myself and today I am great');
 
+INSERT INTO users
+(uname,email,password)
+VALUES
+('shalom', 'ichigeki.ccCsc@hotmail.com', 'shalom21');

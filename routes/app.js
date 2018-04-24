@@ -6,14 +6,21 @@ const updateRouter = express.Router();
 const howtoController = require('../controllers/howtoController');
 const howtoViewController = require('../controllers/howtoViewController');
 
+
 // user authentication 
 const userRouter = require('express').Router();
 const AuthService = require('../services/auth/AuthServices');
 const userViewController = require('../controllers/howtoViewController');
+// const authController = require('../models/howto');
 
-userRouter.get('/profile', AuthService.loginRequired,(req,res) =>{ 
+userRouter.get('/', AuthService.loginRequired,(req,res) =>{ 
   res.json(req.session);
+  
 });
+
+// userRouter.route('/')
+// .get(userViewController.showLoginForm)
+// .post(authController.login, userViewController.handleUserProfile)
 
 function sendError(err, req, res, next) {
     console.log('I send errors');

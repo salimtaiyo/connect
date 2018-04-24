@@ -116,7 +116,7 @@ li {
   height: 40rem;
   text-align: center;
   color: #fff;
-  background-size: cover;
+  background-size: 100% 100%;
   background-attachment: fixed;
   -webkit-box-shadow: 2px 6px 27px 4px #696569;
   -moz-box-shadow: 2px 6px 27px 4px #696569;
@@ -268,9 +268,11 @@ li {
   cursor: pointer; }
 
 .secondContainer__items {
-  overflow: scroll; }
+  overflow: scroll;
+  width: 80%;
+  margin: 0 auto; }
   .secondContainer__items--header {
-    border: 1px dotted black;
+    background-color: rgba(139, 138, 138, 0.692);
     padding: 1rem; }
   .secondContainer__items--subcontent {
     height: 20rem; }
@@ -318,6 +320,13 @@ li {
   .deleteBtn:focus {
     outline: none; }
 
+#close {
+  transition: all .3s ease-in-out; }
+
+#close:hover {
+  cursor: pointer;
+  color: rgba(255, 0, 0, 0.815); }
+
 .main {
   height: 100rem;
   background-color: rgba(236, 235, 235, 0.842);
@@ -361,3 +370,17 @@ li {
   .diseases__span {
     color: rgba(126, 213, 111, 0.801);
     font-size: 1.2vw; }
+
+@media screen and (max-width: 600px) {
+  .title__primary {
+    left: 25%;
+    color: rgba(255, 255, 255, 0.925); }
+    .title__primary--top {
+      animation: slideIn 3s linear;
+      font-size: 350%; }
+    .title__primary--bot {
+      animation: dropDown 3s linear; }
+    .title__primary--btn {
+      font-size: 70%; }
+  .main__flex {
+    display: inline-flex; } }

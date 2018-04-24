@@ -51,31 +51,38 @@ block content
     //- modal for the sign in/ sign up 
     .modal
         .modal__container
-            .modal__container--span X 
+            .modal__container--span#close X 
 
             //- log in box
             .modal__container--one
                 h3 Sign in
-                form(method='POST', action='/auth/login')
-                .input__name
-                    p
-                        label  User email
-                        input.input__name--1(type='email' placeholder='email' name='email')
-                    p
-                        label Password
-                        input.input__name--2(type='password' placeholder='password' name='password')
-                        input.input__name--btn#submit(type='submit' name='login')
+                form(method='POST', action='/dbb')
+                    .input__name
+                        p
+                            label  User email
+                            input.input__name--1(type='text' name="name" placeholder='Name')
+                        p
+                            label  User email
+                            input.input__name--1(type='email' placeholder='email' name='email')
+                        p
+                            label Password
+                            input.input__name--2(type='password' placeholder='password' name='password')
+                            input.input__name--btn#submit(type='submit' name='login')
             //- sign up 
             .modal__container--two
                 h3 Sign up
-                .input__name
-                    p
-                        label  User email
-                        input.input__name--1(type='text', placeholder='Name')
-                    p
-                        label Password
-                        input.input__name--2(type='text', placeholder='Name')
-                        input.input__name--btn#submit(type='submit', placeholder='Confirm')
+                form(method='POST', action='/')
+                    .input__name
+                        p
+                            label  Username
+                            input.input__name--1(type='text' name="name" placeholder='Name')
+                        p
+                            label User email
+                            input.input__name--2(type='text' name="email" placeholder='Email')
+                        p
+                            label Password
+                            input.input__name--3(type='password' name='password' placeholder='Password')
+                            input.input__name--btn#submit(type='submit' placeholder='Confirm')
                         
         a(href="/dbb").a sign in as guest 
 

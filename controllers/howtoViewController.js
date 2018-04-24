@@ -49,7 +49,6 @@ module.exports = {
     showLoginForm,
     showRegistrerForm,
     handleUserProfile,
-    handleUserProfile,
     sendAll,
     sendOneHowto,
     sendCreateHowto,

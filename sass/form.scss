@@ -98,10 +98,14 @@
 // content modal
 .secondContainer__items{
     overflow: scroll;
+    width: 80%;
+    margin: 0 auto;
     // stories header
     &--header{
-        border: 1px dotted black;
+        // border: 1px dotted black;
+        background-color: rgba(139, 138, 138, 0.692);
         padding: 1rem;
+        
     }
 
     // stories 
@@ -175,3 +179,11 @@
     }
 }
 
+// close button for the first get started
+#close{
+    transition: all .3s ease-in-out;
+}
+#close:hover{
+    cursor: pointer;
+    color: rgba(255, 0, 0, 0.815);
+}

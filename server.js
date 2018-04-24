@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 
 const session = require('express-session');
@@ -12,11 +13,11 @@ const PORT = process.env.PORT || 3000;
 // const authRouter = require('/services/auth/AuthRouter');
 
 app.set('server_secret', process.env.SERVER_SECRET);
-// app.use(session({
-//     secret: app.get('server_secret'),
-//     resave: false,
-//     saveUnintialized: false,
-// }));
+app.use(session({
+    secret: app.get('server_secret'),
+    resave: false,
+    saveUnintialized: false,
+}));
 
 app.use( express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false}));
