@@ -19,8 +19,61 @@
           font-size: 70%;
          }
         }
-        .main__flex{
-            display: inline-flex;
-        }
-}
+      
 
+        // flex box
+        .main{
+            height: 60rem;
+       
+            position: relative;
+            margin-top: -15rem;
+            z-index: -1;
+          
+            // header of main 
+            &__content{
+              position: absolute;
+              top: 20rem;
+              text-transform: uppercase;
+              font-size: 1.6vw;
+              
+              &--header{
+                color: rgba(29, 28, 28, 0.596);
+                // text-shadow: -6px 5px 8px rgba(28, 28, 28, 0.801);
+                text-align: center;
+                margin-bottom: 1rem;
+              }
+          
+              &__flex{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+               
+               
+                }
+                &--story{
+                    border-radius: 60%;
+                    background-image: 
+                        url("../images/imp.jpg");
+                    background-size: 100% 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 100%;
+                    padding: 2rem;
+                    text-align: center;
+                    color: rgba(255, 255, 255, 0.842);
+                    font-size: 2rem;
+       
+
+              
+                  }
+              
+                  &--chart{
+                    width: 100%;
+                    padding: 2rem;
+               
+                   
+                  }
+            }
+        }
+    }

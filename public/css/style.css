@@ -382,5 +382,36 @@ li {
       animation: dropDown 3s linear; }
     .title__primary--btn {
       font-size: 70%; }
-  .main__flex {
-    display: inline-flex; } }
+  .main {
+    height: 60rem;
+    position: relative;
+    margin-top: -15rem;
+    z-index: -1; }
+    .main__content {
+      position: absolute;
+      top: 20rem;
+      text-transform: uppercase;
+      font-size: 1.6vw; }
+      .main__content--header {
+        color: rgba(29, 28, 28, 0.596);
+        text-align: center;
+        margin-bottom: 1rem; }
+      .main__content__flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+      .main__content--story {
+        border-radius: 60%;
+        background-image: url("../images/imp.jpg");
+        background-size: 100% 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.842);
+        font-size: 2rem; }
+      .main__content--chart {
+        width: 100%;
+        padding: 2rem; } }
