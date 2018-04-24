@@ -1,8 +1,8 @@
         
 
 <h1>Overview: - </h1>
-<p> A tutorial app that helps users learn new things and post about the things that they are good at. It is not specific to any category, Users can and are allowed to post about anything. Other users are allowed to edit it for improvements. Posts can be updated, deleted and edited </p>
-
+<p> A platform where survivors of various chronic diseases come and share their success stories for encouragement </p>
+<p> Link to my youtube video <a href="https://youtu.be/eDAFvNOo3VE"> Video</a>
 
 <h3> Features </h3>
 <li> A multi page app, the main page greets and gives a basic introductions and the other page contains the tutorials</li>
